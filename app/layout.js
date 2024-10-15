@@ -1,16 +1,11 @@
-import localFont from "next/font/local";
+import { Inter, Bebas_Neue } from 'next/font/google';
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const inter = Inter({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900",],
+  subsets: ["latin"],
+  variable: "--font-inter",
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -21,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased`}
       >
         {children}
       </body>
