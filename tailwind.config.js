@@ -17,7 +17,8 @@ module.exports = {
       xl: "1280px",
     },
     fontFamily:{
-      
+      primary: "var(--font-bebas)",
+      secondary: "var(--font-inter)"
     },
     extend: {
       colors: {
@@ -27,7 +28,10 @@ module.exports = {
           accent: {
             DEFAULT: "#7edad2",
             hover: "#79d3cc",
-          }
+          },
+        },
+        boxShadow: {
+          custom: "0px 14px 54px rgba(0,0,0,0.1)"
         }
       },
     },
