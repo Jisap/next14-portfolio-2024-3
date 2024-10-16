@@ -15,7 +15,7 @@ const Hero = () => {
       </div>
       <div className="container mx-auto h-full">
         <div className="relative z-20 h-full w-full xl:max-w-[768px] flex flex-col items-center xl:items-start justify-center text-center xl:text-left pt-10">
-          <h1 className="h1">
+          <h1 className="h1 mb-2 max-w-[320px] xl:max-w-none">
             <span className="text-accent">I Build And</span> Design Powerful
             <TypeAnimation 
               preRenderFirstString={true}
@@ -30,6 +30,24 @@ const Hero = () => {
               className="ml-2 xl:ml-4"
             />
           </h1>
+          <p className="lead max-w-[476px] mb-7">
+            Delivering powerful, custom websites that blend aesthetics with performance.
+          </p>
+          <ScrollLink
+            to="contact"
+            smooth
+          >
+            <button
+              className="btn btn-accent mb-8"
+            >
+              Contact me
+            </button>
+          </ScrollLink>
+
+          {/* stats */}
+          <div>
+            stats
+          </div>
         </div>
       </div>
     </section>
