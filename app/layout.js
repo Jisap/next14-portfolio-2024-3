@@ -1,5 +1,6 @@
 import { Inter, Bebas_Neue } from 'next/font/google';
-import "./globals.css";
+import localFont from 'next/font/local';
+import "./globals.css"
 
 const inter = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900",],
@@ -7,11 +8,16 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const bebasNeue = Bebas_Neue({
-  weight: [ "400" ],
-  subsets: ["latin"],
-  variable: "--font-bebas",
-})
+// const bebasNeue = Bebas_Neue({
+//   weight: [ "400" ],
+//   subsets: ["latin"],
+//   variable: "--font-bebas",
+// })
+
+const bebasNeue = localFont({
+  src: '../public/fonts/BebasNeue-Regular.ttf',
+  variable: '--font-bebas',
+});
 
 export const metadata = {
   title: "Create Next App",
