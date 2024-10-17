@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { Link as ScrollLink } from "react-scroll"
 import { TypeAnimation } from "react-type-animation"
+import RotatingShape from "./RotatingShape"
 
 
 
@@ -47,6 +48,35 @@ const Hero = () => {
           {/* stats */}
           <div>
             stats
+          </div>
+        </div>
+        {/* image */}
+        <div className="hidden xl:flex w-[55vw] h-[880px] absolute top-0 right-0 bg-accent">
+          <div className="absolute w-[558px] h-[642px] bottom-0 z-40 left-[6.5vw]">
+            <Image 
+              src="/assets/hero/dev.png"
+              fill
+              quality="100"
+              priority
+              className="object-contain"
+              alt="dev"
+            />
+          </div>
+          {/* arrow shape */}
+          <div className="hidden xl:flex absolute top-48 left-[4vw]">
+            <Image 
+              src="/assets/hero/arrow.svg"
+              width={160}
+              height={160}
+              alt=""
+            />
+          </div>
+          {/* shape 1 */}
+          <div>
+            {/* shape 1 */}
+            <div>
+              <RotatingShape />
+            </div>
           </div>
         </div>
       </div>
