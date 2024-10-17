@@ -2,6 +2,7 @@
 
 import { Link as ScrollLink } from "react-scroll"
 import Logo from "./Logo"
+import Nav from "./Nav"
 
 const links = [
   {
@@ -30,7 +31,7 @@ const Header = () => {
           {/* logo */}
           <Logo />
           {/* nav & socials */}
-          <div>nav</div>
+          <Nav />
           <div>socials</div>
         </div>
       </div>

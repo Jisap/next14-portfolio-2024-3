@@ -3,7 +3,7 @@ import Link from "next/link"
 
 
 
-const Logo = ({light = false}) => {
+const Logo = ({ light = false }) => {
 
   //determine the logo color based on the light prop
   const colorClass = light ? "text-white" : "text-primary"

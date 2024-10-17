@@ -10,7 +10,7 @@ import Header from "./Header"
 
 const Hero = () => {
   return (
-    <section className="h-[800px] relative bg-accent/10 xl:bg-primary">
+    <section className="h-[800px] relative bg-accent/10 xl:bg-white">
       {/* header */}
       <Header />
       <div className="container mx-auto h-full">
