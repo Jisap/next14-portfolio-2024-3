@@ -72,12 +72,39 @@ const Hero = () => {
             />
           </div>
           {/* shape 1 */}
-          <div>
+          <div className="absolute top-[600px] left-[3vw]">
             {/* shape 1 */}
             <div>
-              <RotatingShape />
+              <RotatingShape 
+                content={<Image src="assets/hero/shape-1.svg" width={38} height={38} alt="rotate-shape-1" />}
+                direction="left"
+                duration={6}
+              />
             </div>
           </div>
+          {/* shape 2 */}
+          <div className="absolute top-[240px] xl:left-[30vw]">
+            {/* shape 2 */}
+            <div>
+              <RotatingShape
+                content={<Image src="assets/hero/shape-2.svg" width={34} height={34} alt="rotate-shape-2" />}
+                direction="right"
+                duration={5}
+              />
+            </div>
+          </div>
+          {/* shape 3 */}
+          <div className="absolute top-[480px] left-[40vw]">
+            {/* shape 3 */}
+            <div>
+              <RotatingShape
+                content={<Image src="assets/hero/shape-3.svg" width={36} height={36} alt="rotate-shape-3" />}
+                direction="left"
+                duration={7}
+              />
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
