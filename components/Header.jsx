@@ -4,24 +4,7 @@ import { Link as ScrollLink } from "react-scroll"
 import Logo from "./Logo"
 import Nav from "./Nav"
 
-const links = [
-  {
-    name: "home",
-  },
-  {
-    name: "about",
-  },
-  {
-    name: "journey",
-  },
-  {
-    name: "work",
-  },
-  {
-    name: "contact",
-  }
 
-]
 
 const Header = () => {
   return (
