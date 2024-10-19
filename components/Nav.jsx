@@ -24,8 +24,8 @@ const links = [
 
 const Nav = ({ containerStyles, listStyles, linkStyles, spy }) => {
   return (
-    <nav className="containerStyles">
-      <ul className="listStyles">
+    <nav className={containerStyles}>
+      <ul className={listStyles}>
         {links.map((link, index) => {
           return (
             <ScrollLink 
