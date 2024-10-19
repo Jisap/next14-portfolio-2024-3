@@ -32,7 +32,7 @@ const Nav = ({ containerStyles, listStyles, linkStyles, spy }) => {
               key={index}
               activeClass="active"
               to={link.name}
-              sooth
+              smooth
               className={linkStyles}
               spy={spy}
             >
