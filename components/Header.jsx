@@ -3,6 +3,7 @@
 import { Link as ScrollLink } from "react-scroll"
 import Logo from "./Logo"
 import Nav from "./Nav"
+import Socials from "./Socials"
 
 
 
@@ -21,7 +22,10 @@ const Header = () => {
               linkStyles="text-primary font-primary text-lg tracking-[1.4px] transition-all duration-300 cursor-pointer"
               spy={true}
             />
-            <div>socials</div>
+            <Socials 
+              containerStyles="flex items-center gap-2"
+              iconStyles="text-base w-[32px] h-[32px] bg-primary text-white flex items-center justify-center rounded-full"
+            />
           </div>
         </div>
       </div>
