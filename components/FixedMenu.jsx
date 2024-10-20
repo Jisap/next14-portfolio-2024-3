@@ -41,13 +41,32 @@ const FixedMenu = () => {
   return (
     <div className="fixed w-full h-[400px] z-50 flex justify-center pointer-events-none bg-transparent">
       {/* menu */}
-      <div>Menu</div>
+      <AnimatePresence>
+        {
+          showMenu && showMenuButton && (
+            <motion.div className="relative w-full max-w-md md:max-w-none h-[400px] bottom-[28rem] xl:bottom-[21.2rem] px-4 pointer-events-auto">
+              <div className="bg-white w-full h-full shadow-custom max-w-[1170px] mx-auto py-12 xl:py-12 px-12 xl:px-32 flex items-center gap-12 rounded-lg">
+                <div>
+                  nav
+                </div>
+                {/* info */}
+                <div>
+                  info
+                </div>
+              </div>
+            </motion.div>
+          )
+        }
+      </AnimatePresence>
       {/* menu button */}
       {/* render button without animation on mobile devices */}
       {isMobile ? (
-        <div>
-          <button>
-            <CgMenuGridR />
+        <div className="fixed z-50 bottom-16">
+          <button
+            onClick={() => setShowMenu(!showMenu)}
+            className="bg-accent shadow-custom w-[54px] h-[54px] rounded-lg cursor-pointer flex items-center justify-center select-none pointer-events-auto">
+            <CgMenuGridR className="text-4xl text-white"   
+          />
           </button>
         </div>
       ) : (
@@ -64,8 +83,11 @@ const FixedMenu = () => {
               }}
               className="fixed z-50 bottom-16 pointer-events-auto"
             >
-              <button className="bg-accent shadow-custom w-[54px] h-[54px] rounded-lg cursor-pointer flex items-center justify-center select-none">
-                C<CgMenuGridR className="text-4xl text-white" />
+              <button 
+                  onClick={() => setShowMenu(!showMenu)}
+                  className="bg-accent shadow-custom w-[54px] h-[54px] rounded-lg cursor-pointer flex items-center justify-center select-none"
+              >
+                <CgMenuGridR className="text-4xl text-white" />
               </button>
             </motion.div>
           )}
