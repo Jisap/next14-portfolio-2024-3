@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import { useEffect, useState } from "react"
 import { CgMediaQuery, CgMenu, CgMenuGridR } from "react-icons/cg"
 import { useMediaQuery } from "react-responsive"
-import  { FiMapPin, FiPhoneCall, FiMail } from "react-icons/fi"
+import  { FiMapPin, FiPhoneCall, FiMail, FiMap } from "react-icons/fi"
 import Nav from "./Nav"
 import Socials from "./Socials"
 
@@ -49,17 +49,51 @@ const FixedMenu = () => {
                   <Nav 
                     containerStyles="md:border-r border-secondary/20 md:pr-12 w-full md:w-auto text-center md:text-left"
                     listStyles="flex flex-col justify-center gap-4"
-                    linkStyles="font-primary text-4xl text-primary"
+                    linkStyles="font-primary text-4xl text-primary cursor-pointer"
+                    spy={true}
                   />
                   {/* info */}
                   <div className="hidden md:flex">
-                    info
+                    <div className="mx-auto">
+                      <div className="flex gap-12 mb-12">
+                        {/* location */}
+                        <div className="flex flex-col ">
+                          <div className="text-[28px] text-accent mb-2">
+                            <FiMapPin />
+                          </div>
+                          <p className="font-semibold text-primary text-lg">Location</p>
+                          <p>New York USA</p>
+                        </div>
+                        {/* phone */}
+                        <div className="flex flex-col ">
+                          <div className="text-[28px] text-accent mb-2">
+                            <FiPhoneCall />
+                          </div>
+                          <p className="font-semibold text-primary text-lg">Phone</p>
+                          <p>+123 456 789</p>
+                        </div>
+                        {/* email */}
+                        <div className="flex flex-col ">
+                          <div className="text-[28px] text-accent mb-2">
+                            <FiMail />
+                          </div>
+                          <p className="font-semibold text-primary text-lg">Email</p>
+                          <p>youremail@gooogle.com</p>
+                        </div>
+                      </div>
+                    {/* socials */}
+                    <Socials
+                      containerStyles="flex gap-2"
+                      iconStyles="text-[20px] w-[32px] h-[32px] text-primary flex items-center justify-center rounded-full"
+                    />
+                    </div>
                   </div>
               </div>
             </motion.div>
           )
         }
       </AnimatePresence>
+
       {/* menu button */}
       {/* render button without animation on mobile devices */}
       {isMobile ? (
