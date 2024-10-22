@@ -60,12 +60,21 @@ const About = () => {
             </div>
           </div>
           {/* text */}
-          <div className="text-center xl:text-left">
-            <AnimatedText 
-              text="My name is Noah"
-              textStyles="h2 mb-2"
-            />
-            <p>Frontend Developer & Designer</p>
+          <div className="text-center xl:text-left w-full xl:w-[50%] mx-auto xl:mx-0 flex flex-col gap-6">
+            <div>
+              <AnimatedText 
+                text="My name is Noah"
+                textStyles="h2 mb-2"
+              />
+              <p className="text-lg">
+                Frontend Developer & Designer
+              </p>
+            </div>
+            <p className="max-w-[680px] mx-auto xl:mx-0 mb-2">
+              I create visually stunning and functional websites using modern frontend technologies and design principles. 
+              Explore my work to see how I combine creativity with technical skill to deliver exceptional digital experiences.
+            </p>
+            {/* info Items */}
           </div>
         </div>
       </div>
