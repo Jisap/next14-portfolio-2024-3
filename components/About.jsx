@@ -13,6 +13,7 @@ const About = () => {
     <div className='relative pt-12 pb-24' id="about">
       <div className="container mx-auto h-full">
         <div className="h-full flex items-center justify-center">
+          {/* image + shapes */}
           <div className="hidden xl:flex flex-1 pl-8">
             <div className="relative w-full max-w-[380px]">
               {/* shape */}
@@ -57,6 +58,14 @@ const About = () => {
                 </div>
               </div>
             </div>
+          </div>
+          {/* text */}
+          <div className="text-center xl:text-left">
+            <AnimatedText 
+              text="My name is Noah"
+              textStyles="h2 mb-2"
+            />
+            <p>Frontend Developer & Designer</p>
           </div>
         </div>
       </div>
