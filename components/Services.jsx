@@ -41,10 +41,10 @@ const Services = () => {
                   alt=""
                   className="mb-4"
                 />
-                <h3>
+                <h3 className="text-[20px[ text-primary font-semibold mb-3"> 
                   {service.title}
                 </h3>
-                <p>
+                <p className="text-[15px]">
                   {service.description}
                 </p>
               </li>
