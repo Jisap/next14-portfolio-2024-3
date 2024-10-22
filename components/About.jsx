@@ -28,6 +28,34 @@ const About = () => {
                   alt="aboutImg"
                 />
               </div>
+              {/* rotating shape */}
+              <div className="absolute top-2/4 -right-[65px] flex items-center justify-center">
+                <motion.div
+                  animate={{
+                    rotate: [0, 360],
+                  }}
+                  transition={{
+                    duration: 10,
+                    ease: "linear",
+                    repeat: Infinity
+                  }}
+                >
+                  <Image 
+                    src="/assets/about/shape-1.svg"
+                    width={160}
+                    height={160}
+                    alt="about-shape-1"
+                  />
+                </motion.div>
+                <div className="absolute text-center text-white">
+                  <div className="text-5xl font-bold leading-none">
+                    10+
+                  </div>
+                  <div className="leading-none text-center">
+                    Years of <br /> Experience
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
