@@ -75,6 +75,28 @@ const About = () => {
               Explore my work to see how I combine creativity with technical skill to deliver exceptional digital experiences.
             </p>
             {/* info Items */}
+            <div className="flex flex-col lg:flex-row gap-8  max-w-max mx-auto xl:mx-0 items-center">
+              {/* item1 */}
+              <div className="max-w-max">
+                <div className="uppercase font-bold text-primary">Age</div>
+                <p className="">30 years</p>
+              </div>
+              {/* item2 */}
+              <div className="max-w-max">
+                <div className="uppercase font-bold text-primary">Born in</div>
+                <p className="">New York, USA</p>
+              </div>
+              {/* item3 */}
+              <div className="max-w-max">
+                <div className="uppercase font-bold text-primary">Phone</div>
+                <p className="">+123-456-7890</p>
+              </div>
+              {/* item4 */}
+              <div className="max-w-max">
+                <div className="uppercase font-bold text-primary">Email</div>
+                <p className="">youremail@example.com</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
