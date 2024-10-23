@@ -45,19 +45,9 @@
   
 }
 
-/* .shadow-custom {
-  @apply shadow-2xl
-} */
+
 
 .active  {
   @apply text-accent transition-all duration-200;
 }
 
-/* @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-} */

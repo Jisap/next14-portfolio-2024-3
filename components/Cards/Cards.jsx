@@ -32,11 +32,53 @@ const journey = [
   {
     type: "experience",
     company: "Magnolia",
-    logoUrl: "/assets/journey/experience/logo-2.svg",
+    logoUrl: "/assets/journey/experience/logo-3.svg",
     position: "UI/UX Developer",
     duration: "Jan 2017 - Feb 2019",
     description: "Designed web interfaces with cross-browser compatibility and responsiveness. Delivered pixel-perfect designs."
   },
+  {
+    type: "experience",
+    company: "Warpspeed Inc.",
+    logoUrl: "/assets/journey/experience/logo-4.svg",
+    position: "Full Stack Developer",
+    duration: "Aug 2015 - Dec 2016",
+    description: "Developer full-stack solutions using React and Node.js. Integrated frontend ans backed technologies."
+  },
+  //education
+  {
+    type: "education",
+    intitution: "Udemy",
+    logoUrl: "/assets/journey/education/logo-1.svg",
+    qualification: "Web Developer Bootcamp",
+    duration: "jan 2020 - Apr 2020",
+    description: "Learned full-stack development concepts, focusing on React, Node.js, and APIs. Completed hands-on projects to solidify skills."
+  },
+  {
+    type: "education",
+    intitution: "CodeAcademy Bootcamp",
+    logoUrl: "/assets/journey/education/logo-2.svg",
+    qualification: "Full Stack Dev Certification",
+    duration: "jan 2020 - May 2020",
+    description: "Gained experiencie in frontend and backend technologies, including React, Node.js and databases."
+  },
+  {
+    type: "education",
+    intitution: "Desing Institute",
+    logoUrl: "/assets/journey/education/institution.svg",
+    qualification: "UI/UX Diploma",
+    duration: "Aug 2018 - Dec 2018",
+    description: "Studied advanced principles of user interface and user experience design. Developed skills in prototyping, wireframing, and usability testing"
+  },
+  {
+    type: "education",
+    intitution: "Bussines Scholl",
+    logoUrl: "/assets/journey/education/institution.svg",
+    qualification: "Project Management Cert",
+    duration: "Mar 2021 - Jun 2021",
+    description: "Completed certification in project management, focusing on agile methodologies and effective team collaboration."
+  },
+  // skills
 ]
 
 const Cards = () => {
