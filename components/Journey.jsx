@@ -1,4 +1,5 @@
 import AnimatedText from "./AnimatedText"
+import Cards from "./Cards/Cards"
 
 
 
@@ -12,6 +13,7 @@ const Journey = () => {
           textStyles="h2 mb-[30px] text-center"
 
           />
+          <Cards />
       </div>
     </div>
   )
