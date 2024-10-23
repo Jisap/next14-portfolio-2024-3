@@ -1,9 +1,18 @@
-import React from 'react'
+import AnimatedText from "./AnimatedText"
+
+
+
 
 const Journey = () => {
   return (
-    <div className='bg-red-200 py-96' id="journey">
-      Journey
+    <div className='' id="journey">
+      <div className="container mx-auto">
+        <AnimatedText 
+          text="My Professional Journey" 
+          textStyles="h2 mb-[30px] text-center"
+
+          />
+      </div>
     </div>
   )
 }
