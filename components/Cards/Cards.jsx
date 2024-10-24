@@ -145,6 +145,15 @@ const Cards = () => {
             })}
           </div>
         </TabsContent>
+        <TabsContent value="education" className="w-full">
+          <div>
+            {journey
+              .filter((item) => item.type === "education")
+              .map((card, index) => {
+                return <Card key={index} {...card} />
+              })}
+          </div>
+        </TabsContent>
       </Tabs>
     </>
   )
