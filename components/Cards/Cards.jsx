@@ -1,3 +1,4 @@
+"use client"
 
 import { AnimatePresence, motion } from 'framer-motion'
 import Card from './Card'
@@ -149,6 +150,15 @@ const Cards = () => {
           <div>
             {journey
               .filter((item) => item.type === "education")
+              .map((card, index) => {
+                return <Card key={index} {...card} />
+              })}
+          </div>
+        </TabsContent>
+        <TabsContent value="skills" className="w-full">
+          <div>
+            {journey
+              .filter((item) => item.type === "skill")
               .map((card, index) => {
                 return <Card key={index} {...card} />
               })}
