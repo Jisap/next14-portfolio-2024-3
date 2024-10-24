@@ -8,7 +8,8 @@ import {
   FaJs,
   FaReact,
   FaWordpress,
-  FaFigma
+  FaFigma,
+  FaWordpressSimple
 } from 'react-icons/fa'
 
 const journey = [
@@ -79,13 +80,64 @@ const journey = [
     description: "Completed certification in project management, focusing on agile methodologies and effective team collaboration."
   },
   // skills
+  {
+    type: "skill",
+    name: "HTML",
+    icon: <FaHtml5 />,
+    duration: "Learned in 2015",
+    description: "Crafted structured web content using HTML effectively for modern websites, ensuring semanting marckup and accessibility."
+  },
+  {
+    type: "skill",
+    name: "CSS",
+    icon: <FaJs />,
+    duration: "Learned in 2015",
+    description: "Styled responsive wen pages using CSS, ensuring an appealing user experience with modern design principles and layouts."
+  },
+  {
+    type: "skill",
+    name: "Javscript",
+    icon: <FaCss3Alt />,
+    duration: "Learned in 2016",
+    description: "Implemented Javascript for interactivity, enhancing user engagement on websites through dynamic content and features."
+  },
+  {
+    type: "skill",
+    name: "React.js",
+    icon: <FaReact />,
+    duration: "Learned in 2018",
+    description: "Build dynamic user interfaces using React.js, optimizing component-driven design for seamless user experiences and efficienciy."
+  },
+  {
+    type: "skill",
+    name: "WordPress",
+    icon: <FaWordpress />,
+    duration: "Learned in 2020",
+    description: "Developed dynamic websites WordPress, simplifying content management processes while ensuring scalability and performance."
+  },
+  {
+    type: "skill",
+    name: "Figma",
+    icon: <FaFigma />,
+    duration: "Learned in 2018",
+    description: "Designed user interfaces in Figma, facilitating collaboration and rapid prototyping to meet user needs and project goals."
+  },
 ]
 
 const Cards = () => {
   return (
-    <div>
-
-    </div>
+    <>
+      <Tabs 
+        defaultValue="experience"
+        className='w-full flex flex-col items-center'  
+      >
+        <TabsList className="max-w-max mb-[30px]">
+          <TabsTrigger value="experience">Experience</TabsTrigger>
+          <TabsTrigger value="education">Education</TabsTrigger>
+          <TabsTrigger value="skills">My Skills</TabsTrigger>
+        </TabsList>
+      </Tabs>
+    </>
   )
 }
 
