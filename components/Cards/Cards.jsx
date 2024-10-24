@@ -57,7 +57,7 @@ const journey = [
   },
   {
     type: "education",
-    intitution: "CodeAcademy Bootcamp",
+    institution: "CodeAcademy Bootcamp",
     logoUrl: "/assets/journey/education/logo-2.svg",
     qualification: "Full Stack Dev Certification",
     duration: "jan 2020 - May 2020",
@@ -65,7 +65,7 @@ const journey = [
   },
   {
     type: "education",
-    intitution: "Desing Institute",
+    institution: "Desing Institute",
     logoUrl: "/assets/journey/education/institution.svg",
     qualification: "UI/UX Diploma",
     duration: "Aug 2018 - Dec 2018",
@@ -73,7 +73,7 @@ const journey = [
   },
   {
     type: "education",
-    intitution: "Bussines Scholl",
+    institution: "Bussines Scholl",
     logoUrl: "/assets/journey/education/institution.svg",
     qualification: "Project Management Cert",
     duration: "Mar 2021 - Jun 2021",
@@ -136,6 +136,15 @@ const Cards = () => {
           <TabsTrigger value="education">Education</TabsTrigger>
           <TabsTrigger value="skills">My Skills</TabsTrigger>
         </TabsList>
+        <TabsContent value="experience" className="w-full">
+          <div>
+            {journey
+              .filter((item) => item.type === "experience")
+              .map((card, index) => {
+                return <Card key={index} {...card} />
+            })}
+          </div>
+        </TabsContent>
       </Tabs>
     </>
   )
