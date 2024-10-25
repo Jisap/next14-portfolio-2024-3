@@ -51,9 +51,54 @@ const data = [
 ]
 
 const Work = () => {
+
+  // Extract unique categories from data
+  const uniqueCategories = Array.from(new Set(data.map((item) => item.category)))
+
+  // Create tab data with all category and unique categories from data
+  const tabData= [
+    {category: "all"},
+    ...uniqueCategories.map((category) => ({ category }))
+  ];
+
+  
+  const [tabValue, setTabValue] = useState("all");            // state to manage the currently selected tab
+  
+  const [visibleItems, setVisibleItems] = useState(6);        // number of items to show initially
+  
+  const filteredWork = tabValue === "all"                     // filter items based on the selected tab                                          
+      ? data.filter((item) => item.category !== "all") 
+      : data.filter((item) => item.category === tabValue)
+  
+  const loadMoreItems = () => { // Handle loading more items
+    setVisibleItems((prev) => prev + 2)
+  }
+
   return (
-    <section className='bg-blue-200 py-96' id="work">
-      Work
+    <section className='pt-24 min-h-[1000px]' id="work">
+      <div className="container mx-auto">
+        <Tabs
+          defaultValue="all"
+          className="w-full flex flex-col"
+        >
+          <div className="flex flex-col xl:flex-row items-center xl:items-start xl:justify-between mb-[30px]">
+            <AnimatedText  
+              text="My latest Work"
+              textStyles="h2 mb-[30px] xl:mb-0"
+            />
+            {/* render tab triggers */}
+            <TabsList>
+              {tabData.map((item, index) => {
+                return(
+                  <TabsTrigger value={item.category} key={index}>
+                    {item.category}
+                  </TabsTrigger>
+                )
+              })}
+            </TabsList>
+          </div>
+        </Tabs>
+      </div>
     </section>
   )
 }
