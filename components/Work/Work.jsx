@@ -87,16 +87,41 @@ const Work = () => {
               textStyles="h2 mb-[30px] xl:mb-0"
             />
             {/* render tab triggers */}
-            <TabsList>
+            <TabsList
+              className="max-w-max h-full mb-[30px] flex flex-col md:flex-row gap-4 md:gap-0"
+            >
               {tabData.map((item, index) => {
                 return(
-                  <TabsTrigger value={item.category} key={index}>
+                  <TabsTrigger 
+                    key={index}
+                    value={item.category}
+                    className="capitalize w-[120px]"
+                    onClick={() => setTabValue(item.category)}
+                  > 
                     {item.category}
                   </TabsTrigger>
                 )
               })}
             </TabsList>
           </div>
+
+          {/* render content for the selected tab */}
+          <TabsContent
+            value={tabValue}
+            className="w-full"
+          >
+            <div>
+              <AnimatePresence>
+                {filteredWork.slice(0, visibleItems).map((item, index) => (
+                  <motion.div
+                    key={index}
+                  >
+                    <WorkItem {...item} />
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </div>
+          </TabsContent>
         </Tabs>
       </div>
     </section>
