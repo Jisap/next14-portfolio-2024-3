@@ -48,8 +48,8 @@ const Card = ({
             <div className='flex flex-col xl:flex-row items-center xl:items-start gap-4 text-center xl:text-left xl:gap-10 px-4 xl:px-0'>
               {type === "skill" ? (
                 // render icon for skills
-                <div>
-                  <div>{icon}</div>
+                <div className='w-max xl:w-[30px] h-full relative flex items-center justify-center'>
+                  <div className='text-5xl text-primary/90'>{icon}</div>
                 </div>
               ) : (
                 // render logo for experience and education
