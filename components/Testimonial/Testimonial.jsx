@@ -62,6 +62,44 @@ const Testimonial = () => {
           text="What Clients Say" 
           textStyles="h2 mb-[30px] xl:mb-[60px] text-center"
         />
+        <div>
+          {/* slider */}
+          <Swiper 
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            onSwiper={setSwiperRef}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
+
+            }}
+            className="w-full h-[400px] xl:h-[500px]"
+          >
+            {slides.map((slide, index) => {
+              return (
+                <SwiperSlide 
+                  key={index}
+                  className="h-full select-none"
+                >
+                  <div className="w-full h-full flex items-end">
+                    <div className="flex items-end rounded-2xl overflow-hidden">
+                      <Image 
+                        src={slide.img}
+                        quality={100}
+                        fill
+                        alt=""
+                        className="object-cover object-center"
+                      />
+                    </div>
+                  </div>
+                </SwiperSlide>
+              )
+            })}
+          </Swiper>
+        </div>
       </div>
     </div>
   )
