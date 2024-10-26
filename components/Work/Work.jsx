@@ -110,7 +110,7 @@ const Work = () => {
             value={tabValue}
             className="w-full"
           >
-            <div>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-[30px]">
               <AnimatePresence>
                 {filteredWork.slice(0, visibleItems).map((item, index) => (
                   <motion.div
