@@ -115,12 +115,26 @@ const Work = () => {
                 {filteredWork.slice(0, visibleItems).map((item, index) => (
                   <motion.div
                     key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
                   >
                     <WorkItem {...item} />
                   </motion.div>
                 ))}
               </AnimatePresence>
             </div>
+            {/* load more button */}
+            {visibleItems < filteredWork.length && (
+              <div className="flex justify-center mt-12">
+                <button 
+                  className="btn btn-accent"
+                  onClick={loadMoreItems}
+                >
+                  Load More
+                </button>
+              </div>
+            )}
           </TabsContent>
         </Tabs>
       </div>

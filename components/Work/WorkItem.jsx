@@ -23,6 +23,14 @@ const WorkItem = ({href, category, img, title}) => {
           className="object-cover group-hover:scale-105 transition-all duration-500"
         />
       </div>
+      <div className="flex items-center justify-center">
+        <div className="flex-1">
+          <h3 className="h3">{title}</h3>
+        </div>
+        <button className="bg-accent text-white rounded-full w-[48px] h-[48px] flex items-center justify-center -rotate-45 group-hover:rotate-0 transition-all duration-500">
+          <FiArrowRight className="text-2xl" />
+        </button>
+      </div>
     </Link>
   )
 }
