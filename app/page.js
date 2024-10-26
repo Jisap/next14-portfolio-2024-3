@@ -6,6 +6,7 @@ import FixedMenu from '@/components/FixedMenu'
 import Hero from '@/components/Hero'
 import Journey from '@/components/Journey'
 import Services from '@/components/Services'
+import Testimonial from '@/components/Testimonial/Testimonial'
 import Work from '@/components/Work/Work'
 
 import { useEffect } from 'react'
@@ -28,6 +29,7 @@ const Home = () => {
       <About/>
       <Journey />
       <Work />
+      <Testimonial />
       <Contact />
       <div className='h-[3000px]'></div>
     </>
