@@ -43,8 +43,27 @@ const slides = [
 ]
 
 const Testimonial = () => {
+
+  const [swiperRef, setSwiperRef] = useState(null)
+  const [activeSlide, setActiveSlide] = useState(0)
+
+  const handlePrevious = useCallback(() => {
+    swiperRef.slidePrev()
+  },[swiperRef]);
+
+  const handleNext = useCallback(() => {
+    swiperRef.slideNext()
+  }, [swiperRef]);
+
   return (
-    <div>Testimonial</div>
+    <div className="py-24 overflow-hidden">
+      <div className="container mx-auto">
+        <AnimatedText 
+          text="What Clients Say" 
+          textStyles="h2 mb-[30px] xl:mb-[60px] text-center"
+        />
+      </div>
+    </div>
   )
 }
 
