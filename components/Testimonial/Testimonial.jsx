@@ -91,7 +91,11 @@ const Testimonial = () => {
                   className="h-full select-none"
                 >
                   <div className="w-full h-full flex items-end">
-                    <div className="flex items-end rounded-2xl overflow-hidden">
+                    <div className={`${
+                      activeSlide === index ? "h-full" : "h-[240px]"
+                      } flex items-end rounded-2xl overflow-hidden transition-all duration-500 relative w-full`
+                      }
+                    >
                       <Image 
                         src={slide.img}
                         quality={100}
