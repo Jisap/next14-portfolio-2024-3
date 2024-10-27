@@ -72,6 +72,21 @@ const Testimonial = () => {
             <p className="mb-8 max-w-[360px]">
               {slides[activeSlide].message}
             </p>
+            {/* slider buttons */}
+            <div className="flex gap-3">
+              <button 
+                className="text-2xl bg-accent w-[48px] h-[48px] text-white rounded-full flex items-center justify-center hover:bg-accent-hover transition-all duration-300" 
+                onClick={handlePrevious}
+              >
+                <FiArrowLeft />
+              </button>
+              <button
+                className="text-2xl bg-accent w-[48px] h-[48px] text-white rounded-full flex items-center justify-center hover:bg-accent-hover transition-all duration-300"
+                onClick={handleNext}
+              >
+                <FiArrowRight />
+              </button>
+            </div>
           </div>
           {/* slider */}
           <Swiper 
