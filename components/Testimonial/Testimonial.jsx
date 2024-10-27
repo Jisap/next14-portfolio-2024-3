@@ -62,7 +62,14 @@ const Testimonial = () => {
           text="What Clients Say" 
           textStyles="h2 mb-[30px] xl:mb-[60px] text-center"
         />
-        <div>
+        <div className="flex flex-col lg:flex-row gap-12">
+          {/* slider info */}
+          <div className="w-max xl:w-[600px] flex flex-col justify-center items-center xl:items-start text-center xl:text-left mx-auto xl:mx-0">
+            <ImQuotesLeft className="text-9xl text-accent/20 leading-none mb-4"/>
+            <h3 className="h3 mb-2">
+              {slides[activeSlide].name}
+            </h3>
+          </div>
           {/* slider */}
           <Swiper 
             slidesPerView={1}
