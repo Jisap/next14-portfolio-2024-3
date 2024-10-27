@@ -76,6 +76,12 @@ const Testimonial = () => {
               1280: { slidesPerView: 4 },
 
             }}
+            onSlideChange={(swiper) => setActiveSlide(swiper.realIndex)}
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
             className="w-full h-[400px] xl:h-[500px]"
           >
             {slides.map((slide, index) => {
