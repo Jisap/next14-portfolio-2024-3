@@ -69,6 +69,9 @@ const Testimonial = () => {
             <h3 className="h3 mb-2">
               {slides[activeSlide].name}
             </h3>
+            <p className="mb-8 max-w-[360px]">
+              {slides[activeSlide].message}
+            </p>
           </div>
           {/* slider */}
           <Swiper 
@@ -83,7 +86,7 @@ const Testimonial = () => {
               1280: { slidesPerView: 4 },
 
             }}
-            onSlideChange={(swiper) => setActiveSlide(swiper.realIndex)}
+            onSlideChange={(swiper) => setActiveSlide(swiper.realIndex)} // Actualiza estado local con el indice del slide actual
             modules={[Autoplay]}
             autoplay={{
               delay: 3000,
@@ -101,7 +104,7 @@ const Testimonial = () => {
                     <div className={`${
                       activeSlide === index ? "h-full" : "h-[240px]"
                       } flex items-end rounded-2xl overflow-hidden transition-all duration-500 relative w-full`
-                      }
+                    }
                     >
                       <Image 
                         src={slide.img}
