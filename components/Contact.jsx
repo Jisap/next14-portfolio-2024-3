@@ -60,10 +60,10 @@ const Contact = () => {
             {/* form */}
             <form>
               {/* first name & lastname fields */}
-              <div>
-                <div>
-                  <label htmlFor="firstname" className="text-accent">
-                    First Name <span>*</span>
+              <div className="flex gap-8">
+                <div className="flex-1">
+                  <label htmlFor="firstname" className="block mb-2 text-sm font-medium text-primary">
+                    First Name <span className="text-accent">*</span>
                   </label>
                   <input 
                     type="text" 
@@ -73,6 +73,21 @@ const Contact = () => {
                     onChange={handleChange}
                     className="input"
                     placeholder="First Name"
+                    required
+                  />
+                </div>
+                <div className="flex-1">
+                  <label htmlFor="lastname" className="block mb-2 text-sm font-medium text-primary">
+                    Last Name <span className="text-accent">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="lastname"
+                    name="lastname"
+                    value={formData.lastname}
+                    onChange={handleChange}
+                    className="input"
+                    placeholder="Last Name"
                     required
                   />
                 </div>
