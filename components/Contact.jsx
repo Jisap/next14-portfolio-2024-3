@@ -7,7 +7,7 @@ import { FaCheckCircle } from "react-icons/fa"
 
 const Contact = () => {
 
-  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_API_KEY);
+  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_ID);
 
   const [formData, setFormData] = useState({
     firstname: "",
@@ -44,7 +44,7 @@ const Contact = () => {
   },[state.succeeded]);
 
   const handleFormSubmit = (e) => {
-    e.preventDedault();
+    e.preventDefault();
     handleSubmit(formData)
   }
 

@@ -21,6 +21,7 @@ const WorkItem = ({href, category, img, title}) => {
           priority 
           quality={100}
           className="object-cover group-hover:scale-105 transition-all duration-500"
+          alt="workItem"
         />
       </div>
       <div className="flex items-center justify-center">
