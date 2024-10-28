@@ -10,8 +10,8 @@ const Contact = () => {
   const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_API_KEY);
 
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    firstname: "",
+    lastname: "",
     email: "",
     phone: "",
     message: "",
@@ -28,8 +28,8 @@ const Contact = () => {
     if(state.succeeded){
       setShowIcon(true)
       setFormData({
-        firstName: "",
-        lastName: "",
+        firstname: "",
+        lastname: "",
         email: "",
         phone: "",
         message: "",
@@ -51,7 +51,35 @@ const Contact = () => {
   return (
     <section className='pt-8 xl:pt-12 pb-32' id="contact">
       <div className="container mx-auto">
-        contact
+        <div>
+          <div>
+            <AnimatedText 
+              text='Let’s Work Together' 
+              textStyles={`h2 mb-12 xl:text-left`}
+            />
+            {/* form */}
+            <form>
+              {/* first name & lastname fields */}
+              <div>
+                <div>
+                  <label htmlFor="firstname" className="text-accent">
+                    First Name <span>*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="firstname"
+                    name="firstname"
+                    value={formData.firstname}
+                    onChange={handleChange}
+                    className="input"
+                    placeholder="First Name"
+                    required
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   )
