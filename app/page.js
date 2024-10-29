@@ -3,6 +3,7 @@
 import About from '@/components/About'
 import Contact from '@/components/Contact'
 import FixedMenu from '@/components/FixedMenu'
+import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import Journey from '@/components/Journey'
 import Services from '@/components/Services'
@@ -31,7 +32,7 @@ const Home = () => {
       <Work />
       <Testimonial />
       <Contact />
-      
+      <Footer />
     </>
   )
 }
